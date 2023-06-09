@@ -12,12 +12,34 @@ type Props = {
 };
 
 function Buttons(props: Props) {
-  const [isButton1Active, setButton1Active] = useState(true);
+  const [isButton1Active, setButton1Active] = useState(false);
   const [isButton2Active, setButton2Active] = useState(false);
   const [isButton3Active, setButton3Active] = useState(false);
   const [isButton4Active, setButton4Active] = useState(false);
 
-  useEffect(() => {}, [isButton1Active, isButton2Active, isButton3Active, isButton4Active]);
+  useEffect(() => {
+    const checkTimesheetToday = async () => {
+      const timesheetForToday = await ApiClient.getTimesheetForToday();
+      setButton1Active(!timesheetForToday);
+      if(timesheetForToday){
+        props.setTimeSheet(timesheetForToday);
+
+        if(!timesheetForToday.startLunch){
+          setButton2Active(true);
+          return
+        }
+        if(!timesheetForToday.endLunch){
+          setButton3Active(true);
+          return
+        }
+        if(!timesheetForToday.end){
+          setButton4Active(true);
+          return
+        }
+      }
+    }
+    checkTimesheetToday();
+  }, []);
 
   const handleButton1Click = () => {
     setButton1Active(false);
@@ -36,7 +58,6 @@ function Buttons(props: Props) {
 
   const handleButton4Click = () => {
     setButton4Active(false);
-    setButton1Active(true);
   };
 
   const createTimesheet = async () => {

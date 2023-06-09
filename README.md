@@ -1,37 +1,63 @@
-# ponto-eletronico-app
-=======
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<img src="public/thera-solutions-logo.png"/>
 
-## Getting Started
+<h1> Ponto Eletrônico App </h1>
 
-First, run the development server:
+<strong>💻 Para visualizar o projeto clique aqui: <a href="">Ponto Eletrônico App</a></strong>
+<br><br>
+
+<h2>📕 Descrição:</h2>
+
+<p>
+ As funcionalidades seriam:
+
+<ul>- Usuário faz o login e entra na tela que tem:
+<li>os botões de ponto</li>
+<li>uma lista dos horários registrados de cada dia</li>
+</ul>
+<ul>- Ao começar ele clica em “cheguei”, quando for almoçar clica em “fui almoçar”, quando voltar do almoço clica em “voltei” e quando for terminar o dia clica em “fui”.</ul>
+<strong>Obs</strong>.: vale lembrar que o usuário não pode ter mais de 1 registro dos seus horários por dia. Além disso, em um determinado dia, ele só pode clicar nos botões uma única vez.
+
+<ul>Esses cliques são registrados na tabela em baixo dos botões e quando ele finalizar o dia, deve calcular o tempo total utilizado e preencher a coluna “tempo” da tabela.</ul>
+<ul>Na interface há também um cronometro, que deve ser mostrado ao usuário e ir contando o tempo enquanto ele não estiver no período do almoço.</ul>
+
+<h2> 🚶Passo a passo:</h2>
+
+Execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) com seu navegador para ver o resultado.
+<br><br>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<strong>Obs.: Para mostrar o valor final registrado na tabela, deve-se atualizar a página no final do processo de registros</strong>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<h2> 💻Tecnologias usadas:</h4>
+<ul>
+    <li>Html5;</li>
+    <li>CSS3/Sass;</li>
+    <li>Javascript/TypeScript;</li>
+    <li>ReactJS;</li>
+    <li>Next.js.</li>
+</ul>
+<br><br>
 
-## Learn More
+Todas informações foram buscadas da API: <a href="https://theraponto.dev.thera.com.br:4433/swagger/index.html"> Thera Ponto</a>
 
-To learn more about Next.js, take a look at the following resources:
+<h2> 🎥Demonstração:</h2>
+<img alt="Readme" title="Readme" src="public/readme.gif" width="80%;"/>
+<br><br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<h2>🎈To Do: </h2>
+<li>Reorganizar states para que as ações dos botões atualizem o state da table; (Atualizar a tabela de acordo que o tempo for sendo registrado);</li>
+<li>Verificar se o token está expriado e fazer a renovação dele.</li>
+<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
+<br>
+<h4>🖌️ Paleta de cores usada: </h4>
+<ul>
+    <li> ⚪ Branco:	hex-> #ffffff | hsl-> hsl(0, 0%, 100%)</li>
+    <li> 🟡 Amarelo: hex-> #FCCD2A | hsl-> hsl(47, 97%, 58%)</li>
+    <li> ⚫ Preto: hex-> #313030 | hsl-> hsl(0, 1%, 19%)</li>
+</ul>

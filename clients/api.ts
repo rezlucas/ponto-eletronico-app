@@ -80,4 +80,11 @@ export default class ApiClient {
       start: dayjs(item.start).add(3, 'hour').toISOString(),
     }));
   };
+
+  static getTimesheetForToday = async () => {
+    const timesheets: any[] = await this.getTimesheets();
+    return timesheets.find((item: any)=> {
+      return dayjs(item.start).isSame(dayjs(), 'date');
+    })
+  }
 }
