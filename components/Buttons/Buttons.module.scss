@@ -1,0 +1,47 @@
+.wrapperbuttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .recordingbuttons {
+        display: flex;
+        gap: 16px;
+
+        button {
+            background-color: var(--yellow-main);
+            border: 2px solid var(--yellow-main);
+            border-radius: 33px;
+            color: #182533;
+            font-weight: 700;
+            min-width: 100px;
+            padding: 8px 16px;
+            transition: all 1s;
+        }
+
+        button:hover {
+            border-radius: 4px;
+            color: #182533;
+            cursor: pointer;
+            padding: 8px 16px;
+        }
+
+        button:disabled  {
+            background-color: #D3D4D9;
+            border-color: #D3D4D9;
+            color: #828388;
+            cursor: default;
+        }
+
+        button:disabled:hover  {
+            border-radius: 33px;
+        }
+    }
+}
+
+@media (max-width: 600px)
+{
+    .recordingbuttons {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.wrapperheader {
+    background-image: url('/background-header.png');
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+    padding: 16px;
+}
+
+@media (max-width: 600px)
+{
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+}

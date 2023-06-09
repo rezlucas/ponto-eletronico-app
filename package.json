@@ -6,17 +6,29 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --max-warnings=0 && stylelint \"./**/*.{css,scss}\"",
+    "lint:fix": "next lint --fix && stylelint --fix \"./**/*.{css,scss}\"",
+    "prettier:format": "prettier --write \"./**/*.+(ts|tsx|json|css)\""
   },
   "dependencies": {
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
+    "dayjs": "^1.11.8",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "next": "13.4.4",
+    "prettier": "^2.8.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.62.1",
+    "stylelint": "^15.7.0",
+    "stylelint-config-css-modules": "^4.2.0",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-order": "^6.0.3",
     "typescript": "5.1.3"
   }
 }

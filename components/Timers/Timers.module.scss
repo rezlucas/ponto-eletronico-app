@@ -1,0 +1,35 @@
+.wrappertimers {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .timers {
+        display: flex;
+        gap: 32px;
+
+        .iconlabel{
+            align-items: center;
+            color: var(--white-main);
+            display: flex;
+            gap: 8px;
+            width: 130px;
+        }
+
+        .timer {
+            color: var(--white-main);
+        }
+
+        .yellowtimer {
+            color: var(--yellow-main);
+        }
+    }
+}
+
+@media (max-width: 600px)
+{
+    .timers {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+}

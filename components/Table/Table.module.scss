@@ -1,0 +1,22 @@
+
+.recordingtable {
+    border-collapse:collapse;
+    padding:5px;
+    width: 100%;
+  }
+
+  .recordingtable th {
+    background: transparent;
+    border-bottom:1px solid#E6E6E6;
+    color: #828282;
+    font-size: 0.75em;
+    padding: 16px 4px;
+  }
+
+  .recordingtable td {
+    background: #fff;
+    color: #313030;
+    font-size: 0.75em;
+    padding: 16px 4px;
+    text-align:center;
+  }
